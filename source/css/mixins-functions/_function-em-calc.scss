@@ -1,0 +1,38 @@
+// https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+//
+// New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+// Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+//
+//   em-calc(10 20 30px 40);
+//
+// Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+//
+//   em-calc((10, 20, 30, 40px));
+//
+// Optionally call with a different base (eg: 8px) to calculate rem.
+//
+//   em-calc(16px 32px 48px, 8px);
+//
+// If you require to comma separate your list
+//
+//   em-calc((16px, 32px, 48), 8px);
+
+@function convert-to-em($value, $base-value: $base-font-size) {
+    $value: strip-unit($value) / strip-unit($base-value) * 1em;
+
+    @return $value;
+}
+
+@function em-calc($values, $base-value: $base-font-size) {
+    $max: length($values);
+
+    @if $max == 1 { @return convert-to-em(nth($values, 1), $base-value); }
+
+    $emValues: ();
+
+    @for $i from 1 through $max {
+        $emValues: append($emValues, convert-to-em(nth($values, $i), $base-value));
+    }
+
+    @return $emValues;
+}

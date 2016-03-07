@@ -1,0 +1,4 @@
+// values set in variables.scss
+@mixin z-index($layer-name) {
+    z-index: map-get($layers, $layer-name);
+};

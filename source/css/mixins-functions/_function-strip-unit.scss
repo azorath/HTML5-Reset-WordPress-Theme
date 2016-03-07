@@ -1,0 +1,4 @@
+// https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+@function strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}

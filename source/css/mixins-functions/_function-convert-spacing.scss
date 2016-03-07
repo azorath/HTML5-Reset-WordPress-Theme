@@ -1,0 +1,7 @@
+// @param {Number} Photoshop letter-spacing value
+// @return {Number} CSS letter-spacing in em
+@function convert-spacing($value) {
+    $value: strip-unit($value);
+
+    @return $value / 1000 * 1em;
+}

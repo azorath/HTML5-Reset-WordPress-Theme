@@ -1,0 +1,92 @@
+// -------------------------------------------------------------------------- \\
+// Standardklassen
+// -------------------------------------------------------------------------- //
+.clearfix { @include clearfix; }
+.float-left { float: left; }
+.float-right { float: right; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+.ellipsis { @include ellipsis; } // Auspunkten
+.hyphens { @include hyphens; } // Zeilenumbruch
+
+.show { display: block; }
+.hide { display: none !important; }
+.visuallyhidden { @include visuallyhidden; } // Screenreader text
+
+
+// -------------------------------------------------------------------------- \\
+// Links
+// -------------------------------------------------------------------------- //
+a {
+  text-decoration: none;
+  color: $color-link;
+}
+
+a:hover,
+a:focus,
+a:active {
+  outline: 0 none;
+  text-decoration: underline;
+}
+
+
+// -------------------------------------------------------------------------- \\
+// Basisformatierungen
+// -------------------------------------------------------------------------- //
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font-size: ($base-font-size / 16) * 100%;
+  line-height: $base-line-height / $base-font-size;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: $font-1;
+  color: $color-text-base;
+  background: $color-page-bg;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.svg-icon {
+  display: inline-block;
+  fill: currentColor;
+
+  group,
+  path {
+    fill: currentColor;
+  }
+}
+
+// -------------------------------------------------------------------------- \\
+// General stylings
+// -------------------------------------------------------------------------- //
+
+::selection {
+  background: $color-1;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: $color-1;
+  color: #fff;
+}

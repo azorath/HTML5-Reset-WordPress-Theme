@@ -1,0 +1,46 @@
+@mixin clearfix {
+    display: block; // Safari Bugfix
+
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+
+    &.focusable:active,
+    &.focusable:focus {
+        overflow: visible;
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        clip: auto;
+    }
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+@mixin hyphens {
+    word-break: break-word;
+    hyphens: auto;
+}

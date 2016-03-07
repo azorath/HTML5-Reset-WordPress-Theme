@@ -1,26 +1,31 @@
 <?php
 /**
  * @package WordPress
- * @subpackage HTML5-Reset-WordPress-Theme
- * @since HTML5 Reset 2.0
+ * @subpackage Custom-Theme
+ * @since Custom-Theme
  */
 ?>
-		<footer id="footer" class="source-org vcard copyright" role="contentinfo">
-			<small>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
-		</footer>
 
-	</div>
+<?php /*********** Main footer ***********/ ?>
+<footer id="footer" class="c-main-footer source-org vcard copyright" role="contentinfo">
+  <small>&copy;<?php echo date("Y"); echo " "; bloginfo('name'); ?></small>
+</footer>
+<?php // wp_footer(); ?>
 
-	<?php wp_footer(); ?>
+
+<?php /*********** Close wrapper tags ***********/ ?>
+</main>
+</div> <?php /* page wrapper */ ?>
 
 
-<!-- jQuery is called via the WordPress-friendly way via functions.php -->
+<?php /*********** Scripts ***********/ ?>
+<script src="<?php bloginfo('template_directory'); ?>/_/js/app.min.js"></script>
 
-<!-- this is where we put our custom functions -->
-<script src="<?php bloginfo('template_directory'); ?>/_/js/functions.js"></script>
 
-<!-- Asynchronous google analytics; this is the official snippet.
-         Replace UA-XXXXXX-XX with your site's ID and domainname.com with your domain, then uncomment to enable.
+<?php /*********** Google Analytics ***********/ ?>
+<?php /*
+Asynchronous google analytics; this is the official snippet.
+ Replace UA-XXXXXX-XX with your site's ID and domainname.com with your domain, then uncomment to enable.
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,7 +37,7 @@
   ga('send', 'pageview');
 
 </script>
--->
+*/ ?>
 
 </body>
 

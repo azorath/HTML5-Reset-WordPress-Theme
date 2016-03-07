@@ -1,0 +1,67 @@
+// -------------------------------------------------------------------------- \\
+// Calculate colors from one to another
+// http://razorjam.github.io/sasscolourfunctioncalculator/
+// -------------------------------------------------------------------------- //
+
+
+// -------------------------------------------------------------------------- \\
+// Colors
+// -------------------------------------------------------------------------- //
+
+// cyan
+$color-1: rgb(43, 210, 225); // #2bd2e1 cyan
+$color-1-light: rgb(224, 247, 250); // #e0f7fa light cyan
+$color-1-dark: rgb(0, 96, 100); // #006064 dark cyan
+
+
+// -------------------------------------------------------------------------- \\
+// Form colors
+// -------------------------------------------------------------------------- //
+
+// error
+$color-error: rgb(244, 67, 54); // #f44336 - red
+$color-error-light: rgb(255, 235, 238); // #ffebee - light red
+$color-error-dark: rgb(183, 28, 28); // #b71c1c - dark red
+
+// warning
+$color-warning: rgb(255, 235, 59); // #ffeb3b - yellow
+$color-warning-light: rgb(255, 253, 231); // #fffde7 - light yellow
+$color-warning-dark: rgb(255, 193, 7); // #ffc107 - dark yellow / orange
+
+// success
+$color-success: rgb(139, 195, 74); // #8bc34a - green
+$color-success-light: rgb(241, 248, 233); // #f1f8e9 - light green
+$color-success-dark: rgb(51, 105, 30); // #33691e - dark green
+
+
+// -------------------------------------------------------------------------- \\
+// Monochromatic tones
+// -------------------------------------------------------------------------- //
+
+// from light to dark with a touch of blue
+$color-grey-1: rgb(228, 230, 232); // #e4e6e8
+
+
+// -------------------------------------------------------------------------- \\
+// Text colors
+// -------------------------------------------------------------------------- //
+
+$color-text-base: rgb(46, 62, 78); // #2d3e4f - text base color
+$color-text-90: rgb(66, 81, 95); // #42515f - 90% of text base color
+$color-text-80: rgb(88, 101, 113); // #586571 - 80% of text base color
+$color-text-70: rgb(108, 120, 131); // #6c7883 - 70% of text base color
+$color-text-60: rgb(130, 139, 149); // #828b95 - 60% of text base color
+$color-text-50: rgb(150, 158, 166); // #969ea6 - 50% of text base color
+$color-text-40: rgb(190, 193, 197); // #bec1c5 - 40% of text base color
+$color-text-30: rgb(192, 197, 202); // #c0c5ca - 30% of text base color
+$color-text-20: rgb(213, 216, 220); // #d5d8dc - 20% of text base color
+$color-text-10: rgb(234, 235, 237); // #eaebed - 10% of text base color
+$color-text-neutral: rgb(190, 195, 200); // #bec3c8 - grey text (e.g. disabled style)
+
+
+// -------------------------------------------------------------------------- \\
+// Special colors
+// -------------------------------------------------------------------------- //
+
+$color-page-bg: $color-grey-1;
+$color-link: $color-1;

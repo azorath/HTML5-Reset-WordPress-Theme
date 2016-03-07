@@ -1,0 +1,67 @@
+@import '02-mixins-functions';
+
+// --------------------------------------------------------------------------\\
+// Fonts
+// --------------------------------------------------------------------------//
+$base-font-size: 16;
+$base-line-height: 24;
+
+// open sans & brandon grotesque will be loaded by typekit
+// if you use brandon groteque always use font-weight: 500
+$font-1: Helvetica, Arial, sans-serif;
+$font-2: Georgia, serif;
+
+$font-icon: "icons";
+
+// --------------------------------------------------------------------------\\
+// Transitions
+// --------------------------------------------------------------------------//
+$global-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+// --------------------------------------------------------------------------\\
+// Shadows
+// --------------------------------------------------------------------------//
+$shadow-1dp: rem-calc(0 1 2) rgba(#000, .2);
+$shadow-2dp: rem-calc(0 2 4) rgba(#000, .2);
+$shadow-4dp: rem-calc(0 4 8) rgba(#000, .2);
+
+
+// --------------------------------------------------------------------------\\
+// z-index
+// --------------------------------------------------------------------------//
+$layers: (
+  "mobile-nav-trigger": 111,
+  "mobile-nav": 110,
+  "overlay-close": 101,
+  "overlay": 100,
+  "navigation-trigger": 51,
+  "navigation": 50,
+  "flyout": 30,
+  "upper-base": 20,
+  "base": 15,
+  "lower-base": 10,
+  "zero": 0
+);
+
+
+// update in project.js too (mediaqueries)
+$max-content-width: 1200px;
+$main-content-padding: 20px;
+
+
+// -------------------------------------------------------------------------- \\
+// Mediaqueries
+// update in project.js too
+// --------------------------------------------------------------------------//
+$respond-to-no-mediaqueries-fallback: "";
+$respond-to-fallback-class: lt-ie9;
+$respond-to-breakpoints: (
+  large_desktop:  "(min-width: " + em-calc($max-content-width + ($main-content-padding * 2) + 1, 16) + ")",
+  desktop:        "(min-width:" + em-calc(931, 16) + ") and (max-width:" + em-calc($max-content-width + ($main-content-padding * 2), 16) + ")",
+  pad:            "(min-width:" + em-calc(769, 16) + ") and (max-width:" + em-calc(930, 16) + ")",
+  small_pad:      "(min-width:" + em-calc(569, 16) + ") and (max-width:" + em-calc(768, 16) + ")",
+  mobile:         "(min-width:" + em-calc(481, 16) + ") and (max-width:" + em-calc(568, 16) + ")",
+  small_mobile:   "(min-width:" + em-calc(321, 16) + ") and (max-width:" + em-calc(480, 16) + ")",
+  wearable:       "(max-width:" + em-calc(320, 16) + ")"
+);
