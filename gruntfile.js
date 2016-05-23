@@ -193,7 +193,7 @@ module.exports = function(grunt) {
             expand: true,
             src: [
               '**/*',
-              '!PSD'
+              '!PSD/**/*'
             ],
             dest: '_/images/',
             cwd: 'source/images/'
